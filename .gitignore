@@ -3,6 +3,7 @@
 
 # 生成されたレポート・データ
 *.html
+!examples/*.html
 *.json
 *.zip
 
