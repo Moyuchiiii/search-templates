@@ -5,10 +5,22 @@
 ## 実行フロー
 
 ### Phase 0: 初期化
-- ドメインのprompt.mdを読み込む
+- `[ドメイン名]/prompt.md` の存在を確認する
 - `search/country.md`（必要な場合）を読み込む
 - 前回のレポート・track_recordがあれば読み込む（差分追跡用）
-- 事前読み込みファイル（prompt.mdの`## 事前読み込み`セクションで指定）を読み込む
+
+```
+prompt.md あり？
+  ├─ Yes → 読み込んで Phase 1 へ
+  └─ No  → Phase 0.5（自動生成）→ ユーザー確認 → Phase 1 へ
+```
+
+### Phase 0.5: prompt.md 自動生成（00a-generate-prompt.md）
+- **条件**: `[ドメイン名]/prompt.md` が存在しない場合のみ実行
+- ユーザーのテーマからペルソナ・カテゴリ・クエリ・スコアリング等を自動生成する
+- 生成後、ユーザーの承認を得てから Phase 1 へ進む
+- 詳細は `00a-generate-prompt.md` を参照
+- **モデル: Sonnet**
 
 ### Phase 1: 要件明確化（01-clarify.md）
 - 調査目的をサブ質問に分解する
