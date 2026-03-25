@@ -172,14 +172,27 @@ Phase 8: トラックレコード（08-track-record.md）
 
 ---
 
-## 参考にしたリポジトリ
+## 取り込み元
+
+### 公開リポジトリ
 
 | リポジトリ | スター | 取り入れた要素 |
 |-----------|-------|--------------|
-| [stanford-oval/storm](https://github.com/stanford-oval/storm) | 28k | ペルソナ駆動調査 → `02-persona.md` |
-| [assafelovic/gpt-researcher](https://github.com/assafelovic/gpt-researcher) | 26k | コンセンサス検証 → `05-verification.md` |
-| [langchain-ai/open_deep_research](https://github.com/langchain-ai/open_deep_research) | 10.9k | 8フェーズパイプライン → `00-orchestrator.md` |
+| [stanford-oval/storm](https://github.com/stanford-oval/storm) | 28k | ペルソナ駆動調査 → `02-persona.md`, `00-orchestrator.md` |
+| [assafelovic/gpt-researcher](https://github.com/assafelovic/gpt-researcher) | 26k | 適応的クエリ拡張 → `03-search-strategy.md`, コンセンサス検証 → `05-verification.md` |
+| [langchain-ai/open_deep_research](https://github.com/langchain-ai/open_deep_research) | 10.9k | 情報圧縮・構造化 → `06-analysis.md` |
 | [ItzCrazyKns/Perplexica](https://github.com/ItzCrazyKns/Perplexica) | 33.4k | マルチソース検索戦略 → `03-search-strategy.md` |
+
+### Claude Code スキル
+
+| スキル | 取り入れた要素 |
+|--------|--------------|
+| deep-research（firecrawl + exa MCP） | MCP連携による検索強化 → `03-search-strategy.md` |
+| market-research | 市場分析フレームワーク（トップダウン+ボトムアップ）→ `06-analysis.md` |
+| ui-ux-pro-max | デザインシステム生成・チャート選定 → `07-report.md` |
+| article-writing | 文章構造ルール（逆ピラミッド等）→ `07-report.md` |
+| dispatching-parallel-agents | 並列エージェントディスパッチ → `00-orchestrator.md` |
+| theme-factory | プリセットテーマ・カスタムテーマ → `07-report.md` |
 
 ---
 
