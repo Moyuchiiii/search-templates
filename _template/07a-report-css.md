@@ -41,12 +41,15 @@
   --line-height-body: 1.8;
 
   /* レイアウト */
-  --max-width: 960px;
-  --padding-x: 24px;
+  --max-width: 1280px;
+  --padding-x: 32px;
   --section-gap: 64px;
   --card-radius: 12px;
-  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
-  --card-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.06);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.07), 0 4px 6px rgba(0,0,0,0.05);
+  --card-shadow: var(--shadow-sm);
+  --card-shadow-hover: var(--shadow-md);
 
   /* ナビバー */
   --nav-height: 60px;
@@ -172,7 +175,8 @@ body {
    ヒーローセクション（タイトル・日付・サマリー）
    ============================================ */
 .report__hero {
-  padding: 64px 0 48px;
+  padding: 80px 0 72px;
+  background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-alt) 50%, rgba(79, 70, 229, 0.04) 100%);
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -188,7 +192,7 @@ body {
 }
 
 .report__hero-title {
-  font-size: var(--font-size-h1);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 700;
   color: var(--color-text-heading);
   letter-spacing: -0.02em;
@@ -271,7 +275,7 @@ body {
    セクション（交互背景）
    ============================================ */
 .report__section {
-  padding: 56px 0;
+  padding: 80px 0;
 }
 
 .report__section:nth-child(even) {
@@ -336,7 +340,7 @@ body {
    ============================================ */
 .report__card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   margin-top: 24px;
 }
