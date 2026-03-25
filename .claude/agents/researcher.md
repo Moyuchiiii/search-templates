@@ -44,3 +44,25 @@ model: sonnet
 
 - Web検索（デフォルト）→ exa Neural search（補完）→ firecrawl（全文取得）の順で使う
 - MCPツールが利用できない環境では通常のWeb検索のみで実行する
+
+## スキル連携
+
+利用可能なスキルを状況に応じて呼び出す。
+
+### deep-research（`.claude/skills/deep-research/SKILL.md`）
+
+- **呼び出し場面**: トピックの深掘り調査が必要なとき。複数ソースの横断検索・引用付きレポート生成まで一貫して行う
+- **活用方法**: firecrawl と exa の両方を使い、サブ質問ごとに 15〜30 ソースを収集して合成する
+- **並列化**: サブ質問が多い場合は Agent ツールで複数エージェントを並列起動し、最後に統合する
+
+### exa-search（`.claude/skills/exa-search/SKILL.md`）
+
+- **呼び出し場面**: 最新情報の検索、コード例の収集、企業・人物のリサーチ
+- **主要ツール**: `web_search_exa`（一般Web）、`get_code_context_exa`（コード・ドキュメント）
+- **活用方法**: 通常のWeb検索で情報が足りないとき、または技術的なコード例が必要なときに補完として使う
+
+### market-research（`.claude/skills/market-research/SKILL.md`）
+
+- **呼び出し場面**: 市場規模（TAM/SAM/SOM）の推計、競合比較、投資家調査、技術ベンダー評価
+- **活用方法**: 意思決定に直結するリサーチのとき。executive summary → key findings → recommendation の構成で出力する
+- **注意**: 数値はすべてソース付きにすること。推計は推計と明示する

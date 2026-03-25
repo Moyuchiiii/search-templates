@@ -38,6 +38,7 @@ prompt.md あり？
 ### Phase 3: 検索実行（03-search-strategy.md）
 - 検索クエリを生成し実行する
 - 多言語検索・適応的クエリ拡張を行う
+- 利用可能なスキル（`deep-research` / `exa-search` / `market-research`）があれば活用する
 - **モデル: Sonnet**（複数エージェント並列可）
 
 ### Phase 4: データ収集（04-data-collection.md）
