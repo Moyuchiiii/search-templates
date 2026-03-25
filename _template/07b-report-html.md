@@ -38,6 +38,9 @@ CSSは `07a-report-css.md` のコードブロックを `<style>` タグにコピ
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>レポートタイトル</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
   <style>
     /* 07a-report-css.md のCSSをここに貼る */
   </style>
@@ -59,9 +62,9 @@ CSSは `07a-report-css.md` のコードブロックを `<style>` タグにコピ
 
   <main class="report__main">
 
-    <!-- ヒーロー -->
-    <div class="report__container">
-      <div class="report__hero">
+    <!-- ヒーロー（フルワイド背景） -->
+    <div class="report__hero">
+      <div class="report__container">
         <span class="report__hero-label">リサーチレポート</span>
         <h1 class="report__hero-title">レポートタイトル</h1>
         <div class="report__hero-meta">
@@ -72,8 +75,10 @@ CSSは `07a-report-css.md` のコードブロックを `<style>` タグにコピ
           エグゼクティブサマリーをここに3〜5行で書く。結論から書くこと。
         </div>
       </div>
+    </div>
 
-      <!-- 目次 -->
+    <!-- 目次 -->
+    <div class="report__container">
       <nav class="report__toc">
         <p class="report__toc-title">目次</p>
         <ul class="report__toc-list">
